@@ -33,3 +33,4 @@ stg_species_isolates AS (
 
 SELECT *
 FROM stg_species_isolates
+WHERE pid <> 'SMCe0001'

@@ -9,6 +9,8 @@ stg_environmental_samples AS (
         sample_type,
         location,
         gps,
+        CAST(SPLIT_PART(gps, ',', 1) AS DOUBLE) AS latitude,
+        CAST(SPLIT_PART(gps, ',', 2) AS DOUBLE) AS longitude,
         additional_name,
         description,
         collection_date,

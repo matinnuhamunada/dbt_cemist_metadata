@@ -59,5 +59,10 @@ dbt docs generate
 dbt docs serve
 ```
 
+### Synchronize with Metabase
+```bash
+dbt-metabase models --dbt_path . --dbt_database dbt_cemist --metabase_host 'localhost:3000' --metabase_user '<user_id>' --metabase_password '<password>' --metabase_database dbt_cemist --dbt_schema main --metabase_http
+```
+
 # Credits
 This dbt template was inspired adapted from [jaffle_shop_duckdb](https://github.com/dbt-labs/jaffle_shop_duckdb) example.
