@@ -30,6 +30,20 @@ mamba env create -f env.yml
 </details>
 
 #### Configure source location
+Change the location of the metadata files accordingly. This can be done by editing the `profiles.yml`:
+```yaml
+dbt_cemist:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: 'dbt_cemist.duckdb'
+      threads: 2
+      extensions:
+        - parquet
+      external_root: "../Soil\ Community/" # change this to the correct location relative to this file
+``` 
+#### 
 Activate the virtual environment and configures source location by running this python script:
 
 ```bash
