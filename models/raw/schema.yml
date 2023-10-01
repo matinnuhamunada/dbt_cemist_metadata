@@ -1,0 +1,134 @@
+version: 2
+
+models:
+  - name: CeMiSt_Soil_A__Label__-__Environmental__Samples
+    description: Environmental samples description.
+    columns:
+      - name: sample_no_
+        description: Primary key.
+        tests:
+          - not_null
+          - unique
+    # Add relationships and tests for other columns as needed
+  
+  - name: CeMiSt_Soil_B__Label__-__Environmental__analysis
+    description: Environmental analysis details.
+    columns:
+      - name: sample_no_
+        description: Primary key.
+        tests:
+          - not_null
+          - unique
+    # Add relationships and tests for other columns as needed
+      - name: created_from_cemist_a_code
+        description: Foreign key to CeMiSt_Soil_A__Label__-__Environmental__Samples.
+        tests:
+          - relationships:
+              to: ref('CeMiSt_Soil_A__Label__-__Environmental__Samples')
+              field: pid
+  - name: CeMiSt_Soil_C__Label__-__Co-Cultures__analysis
+    description: Details of co-cultures analysis.
+    columns:
+      - name: sample_no_
+        description: Primary key.
+        tests:
+          - not_null
+          - unique
+    # Add relationships and tests for other columns as needed
+#      - name: species_1_code
+#        description: Foreign key to CeMiSt_Soil_M__Label__-__Species__Isolates.
+#        tests:
+#          - relationships:
+#              to: ref('CeMiSt_Soil_M__Label__-__Species__Isolates')
+#              field: pid
+#      - name: _species_2_code_
+#        description: Foreign key to CeMiSt_Soil_M__Label__-__Species__Isolates.
+#        tests:
+#          - relationships:
+#              to: ref('CeMiSt_Soil_M__Label__-__Species__Isolates')
+#              field: pid
+  - name: CeMiSt_Soil_D__Label__-__Species__analysis
+    description: Species analysis details.
+    columns:
+      - name: sample_no_
+        description: Primary key.
+        tests:
+          - not_null
+          - unique
+    # Add relationships and tests for other columns as needed
+  
+  - name: CeMiSt_Soil_E__Label__-__Compounds
+    description: Compounds details.
+    columns:
+      - name: sample_no_
+        description: Primary key.
+        tests:
+          - not_null
+          - unique
+    # Add relationships and tests for other columns as needed
+#      - name: source_sample_code
+#        description: Foreign key to CeMiSt_Soil_B__Label__-__Environmental__analysis.
+#        tests:
+#          - relationships:
+#              to: ref('CeMiSt_Soil_B__Label__-__Environmental__analysis')
+#              field: pid
+  - name: CeMiSt_Soil_M__Label__-__Species__Isolates
+    description: Species isolates details.
+    columns:
+      - name: sample_no_
+        description: Primary key.
+        tests:
+          - not_null
+          - unique
+    # Add relationships and tests for other columns as needed
+#      - name: isolated_from
+#        description: Foreign key to CeMiSt_Soil_A__Label__-__Environmental__Samples.
+#        tests:
+#          - relationships:
+#              to: ref('CeMiSt_Soil_A__Label__-__Environmental__Samples')
+#              field: pid
+  - name: CeMiSt_Soil_N__Label__-__NMR
+    description: NMR analysis details.
+    columns:
+      - name: sample_no_
+        description: Primary key.
+        tests:
+          - not_null
+          - unique
+    # Add relationships and tests for other columns as needed
+#      - name: source_sample_code
+#        description: Foreign key to CeMiSt_Soil_B__Label__-__Environmental__analysis.
+#        tests:
+#          - relationships:
+#              to: ref('CeMiSt_Soil_B__Label__-__Environmental__analysis')
+#              field: pid
+  - name: CeMiSt_Soil_P__Label__-__Plasmids
+    description: Plasmids details.
+    columns:
+      - name: cemistplasmid_id
+        description: Primary key.
+        tests:
+          - not_null
+          - unique
+    # Add relationships and tests for other columns as needed
+#      - name: storagebacterial_host__species_id_
+#        description: Foreign key to CeMiSt_Soil_M__Label__-__Species__Isolates.
+#        tests:
+#          - relationships:
+#              to: ref('CeMiSt_Soil_M__Label__-__Species__Isolates')
+#              field: pid
+  - name: CeMiSt_Soil_S__Label__-__Sequences
+    description: Sequences details.
+    columns:
+      - name: extract_no_
+        description: Primary key.
+        tests:
+          - not_null
+          - unique
+    # Add relationships and tests for other columns as needed
+#      - name: source_code
+#        description: Foreign key to CeMiSt_Soil_M__Label__-__Species__Isolates.
+#        tests:
+#          - relationships:
+#              to: ref('CeMiSt_Soil_M__Label__-__Species__Isolates')
+#              field: pid

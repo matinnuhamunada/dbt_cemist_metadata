@@ -1,0 +1,10 @@
+dbt_cemist:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: 'dbt_cemist.duckdb'
+      threads: 2
+      extensions:
+        - parquet
+      external_root: "../Soil\ Community/"
