@@ -47,7 +47,8 @@ dbt_cemist:
 Activate the virtual environment and configures source location by running this python script:
 
 ```bash
-TO DO
+conda activate dbt-duckdb
+python scripts/clean_excel.py profiles.yml
 ```
 
 #### Run DBT
