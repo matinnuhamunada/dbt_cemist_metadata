@@ -1,8 +1,6 @@
 name: dbt-duckdb
 channels:
   - conda-forge
-  - bioconda
-  - defaults
 dependencies:
   - _libgcc_mutex=0.1=conda_forge
   - _openmp_mutex=4.5=2_gnu
@@ -40,6 +38,7 @@ dependencies:
   - cld2-cffi=0.1.4=py39h5a03fae_1004
   - cli_helpers=2.3.0=pyhd8ed1ab_0
   - click=8.1.3=py39hf3d152e_1
+  - colorama=0.4.6=pyhd8ed1ab_0
   - configobj=5.0.8=pyhd8ed1ab_0
   - contourpy=1.0.7=py39h4b4f3f3_0
   - cryptography=39.0.0=py39hd598818_0
@@ -123,9 +122,11 @@ dependencies:
   - openjpeg=2.5.0=hfec8fc6_2
   - openssl=1.1.1t=h0b41bf4_0
   - orc=1.8.2=hfdbbad2_2
+  - packaging=23.2=pyhd8ed1ab_0
   - pandas=1.5.3=py39h2ad29b5_0
   - parquet-cpp=1.5.1=1
   - parsedatetime=2.4=py_1
+  - pathspec=0.11.2=pyhd8ed1ab_0
   - pillow=9.4.0=py39h2320bf1_1
   - pip=23.2.1=pyhd8ed1ab_0
   - pkgutil-resolve-name=1.3.10=pyhd8ed1ab_0
@@ -145,6 +146,7 @@ dependencies:
   - pytest=7.2.1=pyhd8ed1ab_0
   - python=3.9.0=hffdb5ce_5_cpython
   - python-dateutil=2.8.2=pyhd8ed1ab_0
+  - python-duckdb=0.8.1=py39h134434a_1
   - python-slugify=8.0.1=pyhd8ed1ab_1
   - python_abi=3.9=3_cp39
   - pytimeparse=1.1.8=py_0
@@ -188,56 +190,19 @@ dependencies:
   - zlib=1.2.13=h166bdaf_4
   - zstd=1.5.2=h3eb15da_6
   - pip:
-    - agate==1.7.1
-    - argcomplete==2.0.0
-    - black==23.1.0
-    - cfgv==3.4.0
-    - colorama==0.4.5
-    - datamodel-code-generator==0.17.1
-    - dbt-artifacts-parser==0.2.4
-    - dbt-core==1.6.0
-    - dbt-duckdb==1.6.0
-    - dbt-metabase==0.9.15
-    - dbt-postgres==1.3.3
-    - dbt-semantic-interfaces==0.2.0
-    - dbterd==0.1.1
-    - distlib==0.3.7
-    - dnspython==2.3.0
-    - duckdb==0.8.1
-    - email-validator==1.3.1
-    - et-xmlfile==1.1.0
-    - filelock==3.12.4
-    - genson==1.2.2
-    - hologram==0.0.16
-    - identify==2.5.30
-    - inflect==5.6.2
-    - isort==5.12.0
-    - jsonschema==3.2.0
-    - jsonschema-spec==0.1.3
-    - lazy-object-proxy==1.9.0
-    - markdown-it-py==2.2.0
-    - mashumaro==3.8.1
-    - mdurl==0.1.2
-    - more-itertools==8.14.0
-    - mypy-extensions==1.0.0
-    - nodeenv==1.8.0
-    - openapi-schema-validator==0.3.4
-    - openapi-spec-validator==0.5.1
-    - openpyxl==3.1.2
-    - packaging==21.3
-    - pathable==0.4.3
-    - pathspec==0.9.0
-    - platformdirs==3.10.0
-    - prance==0.22.2.22.0
-    - pre-commit==3.4.0
-    - protobuf==4.24.1
-    - psycopg2-binary==2.9.5
-    - pydantic==1.10.5
-    - pysnooper==1.1.1
-    - rich==13.3.1
-    - ruamel-yaml==0.17.21
-    - ruamel-yaml-clib==0.2.7
-    - sql-metadata==2.6.0
-    - typed-ast==1.5.4
-    - virtualenv==20.24.5
-prefix: /home/matin/miniconda3/envs/dbt-duckdb
+      - agate==1.7.1
+      - dbt-core==1.6.5
+      - dbt-duckdb==1.6.0
+      - dbt-metabase==0.9.15
+      - dbt-semantic-interfaces==0.2.0
+      - et-xmlfile==1.1.0
+      - hologram==0.0.16
+      - jsonschema==3.2.0
+      - markdown-it-py==3.0.0
+      - mashumaro==3.8.1
+      - mdurl==0.1.2
+      - more-itertools==8.14.0
+      - openpyxl==3.1.2
+      - protobuf==4.24.3
+      - pydantic==1.10.13
+      - rich==13.6.0
