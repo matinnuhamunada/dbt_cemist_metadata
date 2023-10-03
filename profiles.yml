@@ -7,4 +7,4 @@ dbt_cemist:
       threads: 2
       extensions:
         - parquet
-      external_root: "../Soil\ Community/"
+      external_root: "/home/matinnu/phd/projects/data_management_cemist/Soil Community"
