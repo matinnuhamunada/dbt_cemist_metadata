@@ -22,6 +22,13 @@ python3 -m pip install -r requirements.txt
 
 <details>
 <summary>install using mamba</summary>
+If you have miniconda installed, you can install mamba using:
+
+```bash
+conda install -n base -c conda-forge mamba
+```
+
+Then, create the environment with:
 
 ```bash
 mamba env create -f env.yml
